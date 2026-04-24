@@ -1,9 +1,10 @@
 import tkinter as tk
 import requests
+API_KEY="63a460a3171b36fe7944756affd7f485"
 
 def get_weather():
     city = entry.get()
-    url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid=YOUR_API_KEY&units=metric"
+    url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid=API_KEY&units=metric"
     
     try:
         data = requests.get(url).json()
